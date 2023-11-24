@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Error 403</title>
+  <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+<div class="container">
+  <div class="center-error">
+    <div>
+      <span class="error-404">Error 403</span>
+      <span th:with="firstRole=${#authentication.authorities[0].authority.substring(5)}" th:text="${'Роль ' + firstRole + ' не имеет доступа к этой операции'}"></span>
+    </div>
+    <div style="margin-top: 50px;">
+      <a href="/vessels">Вернуться на главную</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>
